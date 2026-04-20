@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul_fondo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- LOGO -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/logoo"
+            android:layout_marginTop="30dp"/>
+
+        <!-- NOMBRE DE LA APP -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nombre_app"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/blanco"
+            android:layout_marginTop="10dp"/>
+
+        <!-- FRASE INTRODUCTORIA -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mensaje_login"
+            android:textSize="14sp"
+            android:textColor="@color/blanco"
+            android:layout_marginTop="10dp"
+            android:gravity="center"/>
+
+        <!-- CORREO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/iconocuer"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:id="@+id/etUsuario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/correo_login"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"/>
+        </LinearLayout>
+
+        <!-- CONTRASEÑA -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/iconopass"
+                android:layout_marginEnd="10dp"/>
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/contrase_login"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:background="@android:drawable/edit_text"/>
+        </LinearLayout>
+
+        <!-- BOTÓN INGRESAR -->
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="@string/ingresar_login"
+            android:textColor="@color/blanco"
+            android:textSize="18sp"
+            android:backgroundTint="@color/azul_oscuro"
+            android:layout_marginTop="25dp"/>
+
+        <!-- HUELLA -->
+        <TextView
+            android:id="@+id/in_huella"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ingresar_con_huella"
+            android:textColor="@color/blanco"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:background="@android:drawable/btn_default"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            android:gravity="center"/>
+
+        <!-- RECUPERAR CONTRASEÑA -->
+        <TextView
+            android:id="@+id/tvRecuperarC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recupera_tu_contrase_a"
+            android:textColor="@color/blanco"
+            android:textSize="14sp"
+            android:layout_marginTop="15dp"/>
+
+        <!-- BOTÓN GOOGLE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:backgroundTint="@color/blanco"
+            android:layout_marginTop="20dp"
+            android:padding="8dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/iconogoogle"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/tvIngresarConGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ingresa_con_google"
+                android:textColor="@color/azul_texto"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+        <!-- REGISTRO -->
+        <TextView
+            android:id="@+id/tvRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_tienes_cuenta_reg_strate"
+            android:textColor="@color/blanco"
+            android:textSize="16sp"
+            android:layout_marginTop="25dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

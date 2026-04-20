@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_favoritos"
+            android:title="@string/favoritos"
+            android:icon="@android:drawable/ic_menu_manage"
+        />
+
+        <item
+            android:id="@+id/nav_admin"
+            android:title="@string/gesti_n_admin"
+            android:icon="@android:drawable/ic_menu_manage"
+            />
+
+        <item
+            android:id="@+id/nav_usuarios"
+            android:title="@string/usuarios"
+            android:icon="@android:drawable/ic_menu_manage"
+            />
+
+    </group>
+
+    <item
+        android:id="@+id/nav_cerrar_sesion"
+        android:title="@string/cerrar_sesion"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+    />
+
+
+</menu>
