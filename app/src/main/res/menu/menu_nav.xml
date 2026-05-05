@@ -13,12 +13,14 @@
             android:id="@+id/nav_admin"
             android:title="@string/gesti_n_admin"
             android:icon="@android:drawable/ic_menu_manage"
+            android:visible="false"
             />
 
         <item
             android:id="@+id/nav_usuarios"
             android:title="@string/usuarios"
             android:icon="@android:drawable/ic_menu_manage"
+            android:visible="false"
             />
 
     </group>

@@ -56,4 +56,7 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.biometric)
 
+    implementation(libs.coil)
+    implementation(libs.supabase.storage)
+
 }

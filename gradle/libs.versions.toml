@@ -14,6 +14,7 @@ serialization = "1.6.3"
 kotlin = "1.9.24"
 googleid = "1.2.0"
 biometric = "1.1.0"
+coil = "2.6.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -31,7 +32,8 @@ ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "k
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "serialization" }
 googleid = { group = "com.google.android.libraries.identity.googleid", name = "googleid", version.ref = "googleid" }
 biometric = { module = "androidx.biometric:biometric", version.ref = "biometric" }
-
+coil = {module = "io.coil-kt:coil", version.ref = "coil" }
+supabase-storage = { module = "io.github.jan-tennert.supabase:storage-kt" }
 
 
 [plugins]

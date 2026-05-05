@@ -29,6 +29,7 @@ import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricPrompt
 import androidx.core.content.ContextCompat
 import com.example.actividadandroid.activities.data.CredencialesManager
+import com.example.actividadandroid.activities.data.UsuarioRepository
 
 class Login : AppCompatActivity() {
 
@@ -172,6 +173,30 @@ class Login : AppCompatActivity() {
                     idToken = googleIdTokenCredential.idToken
                     provider = Google
                 }
+
+                // verificar primer Login
+
+                val user =SupabaseClient.client.auth.currentUserOrNull()
+                if (user != null) {
+                    val existe = UsuarioRepository.existeUsuario(user.id)
+                    if (!existe) {
+                        val nombreCompleto = user.userMetadata
+                            ?.get("full_name")?.toString()
+                            ?.replace("\"", "")?:" "
+                        val partes = nombreCompleto.split(" ")
+                        val nombres = partes.firstOrNull()?:""
+                        val apellidos = partes.drop(1).joinToString(" ")
+                        val correoGoogle = user.email?:""
+                        UsuarioRepository.insertarUsuario(
+                            user.id,
+                            nombres,
+                            apellidos,
+                            correoGoogle
+                        )
+                    }
+
+                }
+
 
                 runOnUiThread {
                     Toast.makeText(this@Login, "Inicio de sesión con Google exitoso", Toast.LENGTH_SHORT).show()

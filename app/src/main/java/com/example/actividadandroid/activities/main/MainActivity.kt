@@ -3,6 +3,7 @@ package com.example.actividadandroid.activities.main
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -17,6 +18,7 @@ import androidx.lifecycle.lifecycleScope
 import com.example.actividadandroid.R
 import com.example.actividadandroid.activities.SupabaseClient
 import com.example.actividadandroid.activities.auth.Login
+import com.example.actividadandroid.activities.data.UsuarioRepository
 import com.example.actividadandroid.activities.main.admin.AdminFragment
 import com.example.actividadandroid.activities.main.admin.UsuariosFragment
 import com.example.actividadandroid.activities.main.perfil.PerfilFragment
@@ -60,6 +62,8 @@ class MainActivity : AppCompatActivity() {
         cargarFragment(HomeFragment())
         bottomNav.selectedItemId = R.id.nav_home
 
+        configurarMenuPorRol(navView.menu)
+
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> cargarFragment(HomeFragment())
@@ -81,6 +85,31 @@ class MainActivity : AppCompatActivity() {
             true
             }
     }
+
+    private fun configurarMenuPorRol(menu: Menu) {
+        lifecycleScope.launch {
+            val rol = UsuarioRepository.obtenerRolActual()
+            runOnUiThread {
+                when (rol){
+                    "admin"->{
+                        menu.findItem(R.id.nav_admin).isVisible = true
+                        menu.findItem(R.id.nav_usuarios).isVisible = true
+                    }
+                    "vendedor"->{
+                        menu.findItem(R.id.nav_admin).isVisible = true
+                        menu.findItem(R.id.nav_usuarios).isVisible = false
+                    }
+                    else -> {
+                        menu.findItem(R.id.nav_admin).isVisible = false
+                        menu.findItem(R.id.nav_usuarios).isVisible = false
+                    }
+                }
+            }
+
+        }
+
+    }
+
 
     private fun cargarFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
