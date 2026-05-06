@@ -21,6 +21,7 @@ import com.example.actividadandroid.activities.auth.Login
 import com.example.actividadandroid.activities.data.UsuarioRepository
 import com.example.actividadandroid.activities.main.admin.AdminFragment
 import com.example.actividadandroid.activities.main.admin.UsuariosFragment
+import com.example.actividadandroid.activities.main.perfil.EditarPerfilFragment
 import com.example.actividadandroid.activities.main.perfil.PerfilFragment
 import com.example.actividadandroid.activities.main.producto.CarritoFragment
 import com.example.actividadandroid.activities.main.producto.CatalogoFragment

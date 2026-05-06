@@ -50,5 +50,16 @@
     <string name="agregar_al_carrito">Agregar al carrito</string>
     <string name="cerrar_sesion">Cerrar sesion</string>
     <string name="ingresar_con_huella">Ingresar con huella</string>
+    <string name="editar_perfil_titulo">editar_perfil</string>
+    <string name="cambiar_foto">cambiar_foto</string>
+    <string name="correo">EdCorreo</string>
+    <string name="nueva_contrase_a_opcional">nueva_contraseña</string>
+    <string name="repetir_nueva_contrase_a">nuevaContraseña</string>
+    <string name="guardar_cambios">guardar_cambios</string>
+    <string name="Correo">Correo</string>
+    <string name="nueva_contrase">Nueva Contraseña Opcional</string>
+    <string name="repetir_nueva_contrase">Nueva Contraseña</string>
+    <string name="foto_de_perfil">Foto de Perfil</string>
+    <string name="editar_perfil">Editar Perfil</string>
 
 </resources>
